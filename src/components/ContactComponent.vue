@@ -1,6 +1,7 @@
 <script setup>
 import githubIcon from '../assets/icons/social/github.svg'
 import linkedinIcon from '../assets/icons/social/linkedin.svg'
+import emailIcon from '../assets/icons/social/email.svg'
 
 const contactItems = [
   {
@@ -13,6 +14,11 @@ const contactItems = [
     href: 'https://github.com/dutchcalcifer',
     icon: githubIcon,
   },
+  {
+  label: 'dantepiekart@gmail.com',
+  href: 'mailto:dantepiekart@gmail.com',
+  icon: emailIcon,
+},
 ]
 </script>
 

@@ -1,6 +1,14 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-import items from '../data/subtitleItems'
+
+const items = [
+  'front-end development',
+  'UX/UI design',
+  'designs omzetten naar code',
+  'interactive prototyping',
+  'design systems',
+  'usability testing',
+]
 
 const currentItemIndex = ref(0)
 let intervalId
