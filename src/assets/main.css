@@ -20,3 +20,9 @@ select,
 textarea {
   font: inherit;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
