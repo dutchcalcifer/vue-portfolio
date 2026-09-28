@@ -15,10 +15,10 @@ const contactItems = [
     icon: githubIcon,
   },
   {
-  label: 'dantepiekart@gmail.com',
-  href: 'mailto:dantepiekart@gmail.com',
-  icon: emailIcon,
-},
+    label: 'dantepiekart@gmail.com',
+    href: 'mailto:dantepiekart@gmail.com',
+    icon: emailIcon,
+  },
 ]
 </script>
 
@@ -35,13 +35,18 @@ const contactItems = [
 
 <style scoped>
 .contact-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
   justify-content: center;
   gap: clamp(0.75rem, 2vw, 1.25rem);
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.contact-list li:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 .contact-list a {

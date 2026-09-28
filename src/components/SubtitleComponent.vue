@@ -25,5 +25,30 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <h2>Retegoed in {{ items[currentItemIndex] }}.</h2>
+  <h2 class="subtitle">
+    Retegoed in
+    <Transition name="fade" mode="out-in">
+      <span :key="currentItemIndex">{{ items[currentItemIndex] }}.</span>
+    </Transition>
+  </h2>
 </template>
+
+<style scoped>
+.subtitle {
+  text-align: center;
+}
+
+.subtitle > span {
+  display: block;
+}
+
+.subtitle .fade-enter-active,
+.subtitle .fade-leave-active {
+  transition: opacity 200ms ease;
+}
+
+.subtitle .fade-enter-from,
+.subtitle .fade-leave-to {
+  opacity: 0;
+}
+</style>
